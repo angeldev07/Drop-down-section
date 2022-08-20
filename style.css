@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+  --fz-p: 18px;
+}
+
+body {
+    background-color: var(--Almost-White);
+  font-family: "Epilogue", sans-serif;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Nav styles*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Menu container styles  */
+
+.container {
+  --Almost-Black: hsla(0, 0%, 8%, 0.6);
+  background-color: var(--Almost-Black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translate(110%);
+  transition: transform 0.5s;
+}
+.nav-menu {
+  background-color: var(--Almost-White);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4em 1em;
+  width: 65%;
+  height: 100%;
+}
+
+/* List and items styles */
+.list-item {
+  margin-bottom: 1.5em;
+  color: var(--Medium-Gray);
+  cursor: pointer;
+}
+
+.legend img {
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+
+.list-item a {
+  display: block;
+  color: var(--Medium-Gray);
+}
+
+/* -------- Drop down menu styles --------*/
+.inside-list {
+  display: none;
+  margin: 1rem;
+  transition: height 0.35s;
+}
+
+.inside-item {
+  padding: .5em;
+}
+.inside-item img {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+/* -------- Drop down menu styles end -------- */
+
+/* -------- Login and Register btn -------- */
+.cta-container {
+  text-align: center;
+}
+
+.cta {
+  display: block;
+  padding: 0.7em;
+  color: var(--Medium-Gray);
+}
+
+.register-cta {
+  margin-top: 0.7rem;
+  border: 1px solid;
+  border-radius: 0.7em;
+}
+/* -------- Login and Register btn  end-------- */
+
+/* -------- Hamburguer and close icon  -------- */
+.hamburguer,
+.close {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+/* -------- Hamburguer and close icon end -------- */
+
+/* -------- Special class to show drop down menu  --------*/
+
+/* Show all the nav menu */
+.show {
+  transform: translate(0);
+  z-index: 1;
+}
+/* Show the drop down menu */
+.showDrop {
+  display: block;
+}
+/* Show the icon close */
+.showCancel {
+  display: block;
+}
+
+.rotate{
+    transition: .3s;
+    transform: rotate(180deg);
+}
+
+/* Main content */
+
+.info-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+.texts {
+  margin-top: 1rem;
+  padding: 1em 0.5em;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+
+.desc {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--Medium-Gray);
+  line-height: 1.7;
+}
+
+.texts .register-cta {
+  background-color: var(--Almost-Black);
+  display: inline-block;
+  padding: 1em 2em;
+  margin-bottom: 2rem;
+  color: var(--Almost-White);
+  transition: all .3s;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.sponsors img {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .info-main {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .hero,
+  .texts{
+    text-align: left;
+    width: 50%;
+  }
+  
+  .hero{
+    order:1;
+  }
+
+  .texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .title{
+    padding: .5em .5em 0 0;
+    font-size: 5rem;
+  }
+
+  .desc{
+    padding-right: 2em;
+    width: 90%;
+    font-size: var(--fz-p);
+  }
+
+  /* nav menu */
+
+  .container{
+    background-color: #fff;
+    position: static;
+    height: auto;
+    width: 100%;
+    transform: translate(0);
+  }
+
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  .nav-list{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: .5em;
+  }
+
+  .list-item{
+    margin: 0 1rem;
+  }
+
+  .cta-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-menu{
+    display: none;
+  }
+
+  .container .register-cta{
+    margin: 0 1em;
+    padding: .7em 1.5em;
+  }
+
+  .drop{
+    position: relative;
+  }
+
+  .inside-list{
+    position: absolute;
+    left: -80px;
+    background-color: #fff;
+    width: max-content;
+    padding: 1em;
+    box-shadow: 0 5px 10px rgba(0 0 0 /.5);
+    border-radius: .3rem;
+  }
+
+  .inside-p{
+    left: -50px;
+  }
+
+  .sponsors{
+    justify-content: space-between;
+    gap: 3rem;;
+  }
+
+  /* Hover effects */
+  .cta:hover{
+    color: var(--Almost-Black);
+    font-weight: 700;
+  }
+
+  .texts .register-cta:hover{
+    background-color: var(--Almost-White);
+    color: #000;
+    font-weight: 700;
+    border: 1px solid;
+  }
+  
+}
