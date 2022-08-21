@@ -40,7 +40,7 @@ a {
 .container {
   --Almost-Black: hsla(0, 0%, 8%, 0.6);
   background-color: var(--Almost-Black);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
